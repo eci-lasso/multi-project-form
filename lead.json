@@ -1,12 +1,12 @@
 {
 	"clientId":"693",
 	"project":[{
-		"name": "BBH - Cradle Bay",
-		"projectId": "12568"
+		"name":"BBH - Cradle Bay",
+		"projectId":"12568"
   		},
 		{
-		"name": "BBH - Silent Hill",
-    	"projectId": "12567"
+		"name":"BBH - Silent Hill",
+		"projectId":"12567"
   		}],
 	"person":{
 		"nameTitle":"Dr",
@@ -68,7 +68,7 @@
 		"domainAccountId":"LAS-930551-01",
 		"guid":"fb6db0f9-0652-4e48-acca-cf31f2f5d8fb"
 		},
-	"sendSalesRepAssignmentNotification" true,
+	"sendSalesRepAssignmentNotification":true,
 	"thankYouEmailTemplateId":"256449",
 	"questions":[{
 		"questionId":"80560",
