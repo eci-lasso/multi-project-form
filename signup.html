@@ -47,13 +47,15 @@ $(document).ready(function(){
 			FirstName: "required",
 			LastName: "required",
 			"Email": { required: true, email: true },
-			"Phone": "required"
+			"Phone": "required",
+			"ProjectID[]": "required"
 		},
 		messages:{
 			FirstName: "Please enter a first name",
 			LastName: "Please enter a last name",
 			"Email": "Please enter an e-mail address",
-			"Phone": "Please enter a telephone number"
+			"Phone": "Please enter a telephone number",
+			"ProjectID[]": "Please select a project"
 		},
 		submitHandler: function(form){
 			return register();
