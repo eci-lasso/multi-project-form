@@ -12,20 +12,19 @@ $apiKey = 'N*GMY)hjc%';
 
 if (empty($clientId) || empty($_REQUEST['ProjectID']) || empty($apiKey)){
 	throw new Exception('Required parameters are not set, please
-						check that your $clientId, $projectId and $apiKey are
-						configured correctly');
-	}
-
+			     check that your $clientId, $projectId and $apiKey are
+			     configured correctly');
+}
  
 /* Constructing and submitting a lead:
  * Map form fields to the lead object and submit
  */
 $lead = new LassoLead(
 	$_REQUEST['FirstName'],
-    $_REQUEST['LastName'],
-    $_REQUEST['ProjectID'][0],
-    $clientId
-	);
+	$_REQUEST['LastName'],
+	$_REQUEST['ProjectID'][0],
+	$clientId
+);
 
 /* Projects
  * 
@@ -34,9 +33,9 @@ $lead = new LassoLead(
 foreach($_REQUEST['ProjectID'] as $index => $projectId){
 	if ($index == 0){
 		continue;
-		}
-	$lead->addProject($projectId);
 	}
+	$lead->addProject($projectId);
+}
 
 $lead->addPhone($_REQUEST['Phone']);
 
@@ -44,11 +43,11 @@ $lead->addEmail($_REQUEST['Email']);
 
 $lead->addAddress(
 	$_REQUEST['Address'],
-    $_REQUEST['City'],
-    $_REQUEST['Province'],
-    $_REQUEST['PostalCode'],
-    $_REQUEST['Country']
-	);
+	$_REQUEST['City'],
+	$_REQUEST['Province'],
+	$_REQUEST['PostalCode'],
+	$_REQUEST['Country']
+);
 
 $lead->setCompany($_REQUEST['Company']);
 
@@ -70,7 +69,7 @@ $lead->setRotationId('Online');
  */
 foreach($_REQUEST['Questions'] as $questionId => $value){
 	 $lead->answerQuestionById($questionId, $value);
-	 }
+}
 
 /* Questions (text answer)
  *
@@ -89,7 +88,8 @@ $lead->signupEmailLink = 'http://www.bestbuilderhomes.com/BestBuilder-ThankYou-E
 $lead->signupEmailSubject = 'Thank you for registering at [@PROJECT_NAME]';
 
 /* GUID Generator
- * Generates the GUID used in Website Tracking
+ *
+ * Generates the GUID that is used for Website Tracking
  */
 function getGUID(){
     if (function_exists('com_create_guid')){
@@ -98,7 +98,7 @@ function getGUID(){
     else {
         mt_srand((double)microtime()*10000);
         $charid = strtoupper(md5(uniqid(rand(), true)));
-        $hyphen = chr(45);// "-"
+        $hyphen = chr(45);
         $uuid = substr($charid, 0, 8).$hyphen
             .substr($charid, 8, 4).$hyphen
             .substr($charid,12, 4).$hyphen
