@@ -89,11 +89,6 @@ $lead->answerQuestionByIdForText(80564,$_REQUEST['Questions'][80564]);
 $lead->signupEmailLink = 'http://www.bestbuilderhomes.com/BestBuilder-ThankYou-Email.html';
 $lead->signupEmailSubject = 'Thank you for registering at [@PROJECT_NAME]';
 
-/* GUID Generator
- *
- * Generates the GUID that is used for Website Tracking
- */
-
 /* Website Tracking
  *
  * Value for $domainAccountId can be found in the tracking code provided by Lasso
