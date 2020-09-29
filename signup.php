@@ -92,7 +92,7 @@ $lead->signupEmailSubject = 'Thank you for registering at [@PROJECT_NAME]';
 /* Website Tracking
  *
  * Value for $domainAccountId can be found in the tracking code provided by Lasso
- * $lead->setWebsiteTracking ($domainAccountId, $_REQUEST['guid']);
+ * $lead->setWebsiteTracking ($domainAccountId, $_REQUEST[$guid]);
  */
 $lead->setWebsiteTracking('LAS-000000-01', $_REQUEST['guid']);
 
