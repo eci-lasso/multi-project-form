@@ -8,14 +8,14 @@ require('src/RegistrantSubmitter.php');
  * Note that $apiKey is where the Lasso UID is placed.
  */
 $clientId  = '1111';
-$apiKey = 'X1X1X';
+$apiKey = '1x1x1';
 
 if (empty($clientId) || empty($_REQUEST['ProjectID']) || empty($apiKey)){
 	throw new Exception('Required parameters are not set, please
-			     check that your $clientId, $projectId and $apiKey are
-			     configured correctly');
+				check that your $clientId, $projectId and $apiKey are
+				configured correctly');
 }
- 
+
 /* Constructing and submitting a lead:
  * Map form fields to the lead object and submit
  */
@@ -63,8 +63,6 @@ $lead->setSecondarySourceType('Sample Registration Form');
 
 $lead->setFollowUpProcess('30 Day Follow-up');
 
-$lead->setRotationId('Online');
-
 /* Questions (select answer)
  *
  * For any number of questions on the form where answers are selected
@@ -78,7 +76,7 @@ foreach($_REQUEST['Questions'] as $questionId => $value){
  * Only for questions that require text input answers
  * $lead->answerQuestionByIdForText($questionId,$_REQUEST['Questions'][$questionId]);
  */
-$lead->answerQuestionByIdForText(80564,$_REQUEST['Questions'][80564]);
+$lead->answerQuestionByIdForText(5555,$_REQUEST['Questions'][5555]);
 
 /* Auto-reply Email
  *
@@ -92,9 +90,9 @@ $lead->signupEmailSubject = 'Thank you for registering at [@PROJECT_NAME]';
 /* Website Tracking
  *
  * Value for $domainAccountId can be found in the tracking code provided by Lasso
- * $lead->setWebsiteTracking ($domainAccountId, $_REQUEST[$guid]);
+ * $lead->setWebsiteTracking ($domainAccountId, $_REQUEST['guid']);
  */
-$lead->setWebsiteTracking('LAS-000000-01', $_REQUEST['guid']);
+$lead->setWebsiteTracking('LAS-123456-01', $_REQUEST['guid']);
 
 $lead->sendAssignmentNotification();
 
