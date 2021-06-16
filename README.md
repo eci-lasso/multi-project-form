@@ -7,7 +7,7 @@
 </ul>
 
 
-<p>The following fields will need to be updated in <a href="https://github.com/eci-lasso/multi-project-form/blob/master/signup.php" target="_blank">signup.php</a>:</p>
+<p>Update the following fields in <a href="https://github.com/eci-lasso/multi-project-form/blob/master/signup.php" target="_blank">signup.php</a>:</p>
 <ul>
 <li><code>clientId</code></li>
 <li><code>apiKey</code></li>
