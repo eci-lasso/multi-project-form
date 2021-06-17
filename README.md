@@ -11,7 +11,7 @@
 <ul>
 <li><code>clientId</code></li>
 <li><code>apiKey</code></li>
-<li>Any other project-specific fields that require a text or numeric value</li>
+<li>Any other project-specific fields that require a text or numeric value (e.g., <code>setRating</code>, <code>setSourceType</code>... etc.)</li>
 </ul>
 
 <p>Request Project ID when constructing a lead and then create a loop to pass the value of the selected options.</p>
