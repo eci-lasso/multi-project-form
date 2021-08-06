@@ -87,6 +87,13 @@ $lead->answerQuestionByIdForText(5555,$_REQUEST['Questions'][5555]);
 $lead->signupEmailLink = 'http://www.bestbuilderhomes.com/BestBuilder-ThankYou-Email.html';
 $lead->signupEmailSubject = 'Thank you for registering at [@PROJECT_NAME]';
 
+/* Opt-In (Default) Email
+ *
+ * Triggers the Opt-In (Default) specialized template to be sent from each project
+ * $lead->sendOptInEmail();
+ */
+$lead->sendOptInEmail();
+
 /* Website Tracking
  *
  * Value for $domainAccountId can be found in the tracking code provided by Lasso
