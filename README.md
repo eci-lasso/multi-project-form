@@ -10,7 +10,7 @@
 <p>Update the following fields in <a href="https://github.com/eci-lasso/multi-project-form/blob/master/signup.php" target="_blank">signup.php</a>:</p>
 <ul>
 <li><code>clientId</code></li>
-<li><code>apiKey</code></li>
+<li><code>apiKey</code> (This is the LassoUID from Lasso)</li>
 <li>Any other project-specific fields (e.g., <code>setRating</code>, <code>setSourceType</code>... etc.)</li>
 </ul>
 
