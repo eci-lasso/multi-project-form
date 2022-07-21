@@ -3,8 +3,8 @@
 require('src/LassoLead.php');
 require('src/RegistrantSubmitter.php');
 
-$clientId  = '693';
-$apiKey = 'xMWgb7c5bz';
+$clientId  = '1111';
+$apiKey = '1x1x1';
 
 if (empty($clientId) || empty($_REQUEST['ProjectID']) || empty($apiKey)){
 	throw new Exception('Required parameters are not set, please check that
