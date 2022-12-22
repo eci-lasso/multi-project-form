@@ -7,16 +7,16 @@ $clientId  = '1111';
 $apiKey = '1x1x1';
 
 if (empty($clientId) || empty($_REQUEST['ProjectID']) || empty($apiKey)){
-	throw new Exception('Required parameters are not set, please check that
-				your $clientId, $projectId and $apiKey are
-				configured correctly');
+  throw new Exception('Required parameters are not set, please check that
+                        your $clientId, $projectId and $apiKey are
+                        configured correctly');
 }
 
 $lead = new LassoLead(
-	$_REQUEST['FirstName'],
-	$_REQUEST['LastName'],
-	$_REQUEST['ProjectID'][0],
-	$clientId
+  $_REQUEST['FirstName'],
+  $_REQUEST['LastName'],
+  $_REQUEST['ProjectID'][0],
+  $clientId
 );
 
 /* Projects
@@ -24,10 +24,10 @@ $lead = new LassoLead(
  * For a single form to submit to multiple selected projects
  */
 foreach($_REQUEST['ProjectID'] as $index => $projectId){
-	if ($index == 0){
-		continue;
-	}
-	$lead->addProject($projectId);
+  if ($index == 0){
+    continue;
+  }
+  $lead->addProject($projectId);
 }
 
 $lead->addPhone($_REQUEST['Phone']);
